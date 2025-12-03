@@ -1,26 +1,5 @@
 @charset "UTF-8";
-/*
- * lab5/scss/styles.scss
- */
-/* ========================================================== */
-/* 1. ЗМІННІ (VARIABLES) */
-/* ========================================================== */
-/* Кольори */
-/* Основний колір (посилання, активні елементи) */
-/* Вторинний колір (світлий фон) */
-/* Колір основного тексту та заголовків */
-/* Колір рамок */
-/* Колір фону дати на зображенні */
-/* Білий колір */
-/* Розміри шрифтів (Нове згідно 1.1) */
-/* ========================================================== */
-/* 2. МАПИ ТА МІКСИНИ (MAPS & MIXINS) (Нове згідно 1.2) */
-/* ========================================================== */
-/* Карта брейкпоінтів */
-/* Міксина для медіа-запитів */
-/* ========================================================== */
-/* 3. БАЗОВІ СТИЛІ */
-/* ========================================================== */
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -48,17 +27,14 @@ a:hover {
   padding-left: 15px;
 }
 
-/* ========================================================== */
-/* 4. СТИЛІ ДЛЯ НОВИН */
-/* ========================================================== */
-/* Заголовок */
+
 .view-header {
   margin: 30px 0 20px 0;
   text-align: center;
 }
 
 .view-header h2 {
-  font-size: 28px; /* Використання змінної */
+  font-size: 28px; 
   color: #333;
   display: inline-block;
   border-bottom: 2px solid #007bff;
@@ -69,13 +45,13 @@ a:hover {
   color: #333;
 }
 
-/* Сітка новин (CSS GRID) */
+
 .views-view-grid {
   display: grid;
   gap: 30px;
   padding: 0 15px;
   margin-bottom: 30px;
-  /* Mobile (default) - 1 колонка */
+
   grid-template-columns: repeat(1, 1fr);
 }
 
@@ -114,12 +90,12 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.7);
   color: #fff;
   padding: 5px 10px;
-  font-size: 13px; /* Використання змінної */
+  font-size: 13px;
   font-weight: bold;
 }
 
 .views-col h3 {
-  font-size: 16px; /* Використання змінної */
+  font-size: 16px; 
   font-weight: bold;
   color: #333;
   padding: 15px;
@@ -127,32 +103,24 @@ a:hover {
   flex-grow: 1;
 }
 
-/* ========================================================== */
-/* 5. АДАПТИВНІСТЬ ЧЕРЕЗ МІКСИНУ RESPOND-TO */
-/* ========================================================== */
-/* Tablet (768px – 1023px) - 2 колонки */
-/* Для міксини respond-to($breakpoint) використовуємо min-width: */
+
 @media (min-width: 768px) {
   .views-view-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-/* Desktop (1024px і більше) - 4 колонки */
-/* Для міксини respond-to($breakpoint) використовуємо min-width: */
+
 @media (min-width: 1024px) {
   .views-view-grid {
-    grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+    grid-template-columns: repeat(4, 1fr);
   }
 }
-/* ========================================================== */
-/* 6. ІНШІ СТИЛІ */
-/* ========================================================== */
-/* Приховування додаткового списку новин */
+
 .views-element-container.form-group:not(#block-views-block-front-page-news-block-3) {
   display: none;
 }
 
-/* Стилі для пагінації */
+
 .pager-nav {
   text-align: center;
   margin-top: 20px;
@@ -192,6 +160,3 @@ a:hover {
   cursor: default;
 }
 
-/* ... (решта стилів пагінації) */
-
-/*# sourceMappingURL=styles.css.map */
