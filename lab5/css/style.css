@@ -1,8 +1,3 @@
-/*
- * style.css
- */
-
-/* 1. Загальні стилі та центральне розташування */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -20,16 +15,16 @@ a:hover {
     text-decoration: none;
 }
 
-/* Обмежуємо контейнер по ширині та центруємо його */
+
 .container {
-    max-width: 1200px; /* Максимальна ширина вмісту */
+    max-width: 1200px; 
     margin-right: auto;
     margin-left: auto;
     padding-right: 15px;
     padding-left: 15px;
 }
 
-/* 2. Стилі для заголовка "Новини університету" */
+
 .view-header {
     margin: 30px 0 20px 0;
     text-align: center;
@@ -47,35 +42,35 @@ a:hover {
     color: #333;
 }
 
-/* 3. Реалізація адаптивної сітки новин за допомогою CSS GRID */
 
-/* Головний контейнер сітки */
+
+
 .views-view-grid {
     display: grid; 
-    gap: 30px; /* Відступи між картками новин */
+    gap: 30px;
     padding: 0 15px;
     margin-bottom: 30px;
 }
 
-/* Робимо клас .row "прозорим", щоб елементи .views-col стали прямими дітьми Grid */
+
 .views-view-grid .row {
     display: contents; 
 }
 
-/* Скидання старих float-стилів для колонки */
+
 .views-col {
     float: none;
     padding: 0;
     margin-bottom: 0;
 }
 
-/* Стилі для окремої картки новини */
+
 .views-col > div {
     height: 100%;
 }
 
 .views-col a {
-    display: flex; /* Використовуємо Flexbox всередині картки для вертикального вирівнювання */
+    display: flex;
     flex-direction: column;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -84,7 +79,7 @@ a:hover {
     height: 100%;
     text-decoration: none;
     color: #333;
-    overflow: hidden; /* Щоб тінь відображалася коректно */
+    overflow: hidden; 
 }
 
 .views-col a:hover {
@@ -119,37 +114,34 @@ a:hover {
     color: #333;
     padding: 15px;
     margin: 0;
-    flex-grow: 1; /* Забезпечує, що заголовок займе весь доступний простір, вирівнюючи низ карток */
+    flex-grow: 1; 
 }
 
-/* 4. Адаптивність (Медіа-запити) за допомогою CSS GRID */
 
-/* Mobile (Мобільні пристрої): до 767px - 1 колонка */
 .views-view-grid {
     grid-template-columns: repeat(1, 1fr); 
 }
 
-/* Tablet (Планшети): 768px – 1023px - 2 колонки */
+
 @media (min-width: 768px) and (max-width: 1023px) {
     .views-view-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+        grid-template-columns: repeat(2, 1fr); 
     }
 }
 
-/* Desktop (Настільні ПК і ноутбуки): 1024px і більше - 4 колонки */
+
 @media (min-width: 1024px) {
     .views-view-grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 колонки */
+        grid-template-columns: repeat(4, 1fr); 
     }
 }
 
-/* 5. Приховування додаткового списку новин (повторюваний текст унизу) */
-/* Вибираємо контейнер, що містить текстові посилання, виключаючи головний блок новин (#block-views-block-front-page-news-block-3) */
+ 
 .views-element-container.form-group:not(#block-views-block-front-page-news-block-3) {
     display: none;
 }
 
-/* 6. Стилі для пагінації */
+илі для пагінації */
 .pager-nav {
     text-align: center;
     margin-top: 20px;
